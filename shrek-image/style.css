@@ -1,4 +1,3 @@
-html body,
 img {
-  background: url("img-url") !important;
+  content: url("img-url");
 }
