@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Shrek Images",
+  "description": "Swap all images with Shrek",
+  "version": "1",
+  "author": "Pengpa0012",
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "./images/shrek-img.jpg"
+  },
+  "icons": {
+    "16": "./images/shrek-img.jpg",
+    "32": "./images/shrek-img.jpg",
+    "48": "./images/shrek-img.jpg",
+    "128": "./images/shrek-img.jpg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["./script/index.js"]
+    }
+  ]
+}
