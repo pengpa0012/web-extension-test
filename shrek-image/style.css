@@ -1,0 +1,4 @@
+html body,
+img {
+  background: url("img-url") !important;
+}

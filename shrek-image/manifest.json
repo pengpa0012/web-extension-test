@@ -6,18 +6,19 @@
   "author": "Pengpa0012",
   "action": {
     "default_popup": "hello.html",
-    "default_icon": "./images/shrek-img.jpg"
+    "default_icon": "/images/shrek-img.png"
   },
   "icons": {
-    "16": "./images/shrek-img.jpg",
-    "32": "./images/shrek-img.jpg",
-    "48": "./images/shrek-img.jpg",
-    "128": "./images/shrek-img.jpg"
+    "16": "/images/shrek-img.png",
+    "32": "/images/shrek-img.png",
+    "48": "/images/shrek-img.png",
+    "128": "/images/shrek-img.png"
   },
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["./script/index.js"]
+      "js": ["content-script.js"],
+      "css": ["style.css"]
     }
   ]
 }
