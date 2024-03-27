@@ -12,11 +12,15 @@ div.innerHTML = `
   </div>
 `
 body.appendChild(div)
+const openBtn = document.querySelector(".ui")
 const start = document.querySelector(".start-btn")
 const pause = document.querySelector(".pause-btn")
 const reset = document.querySelector(".reset-btn")
 
+openBtn.addEventListener("click", () => openBtn.classList.toggle("active"))
 start.addEventListener("click", () => {})
 pause.addEventListener("click", () => {})
 reset.addEventListener("click", () => {})
+
+// add function
 
