@@ -1,13 +1,22 @@
 const body = document.querySelector("body")
-const btn = document.createElement("button")
+const div = document.createElement("div")
 
-btn.textContent = "start"
-btn.classList = "btn"
-body.appendChild(btn)
+div.classList = "ui"
+div.innerHTML = `
+  <p class="timer-display">23</p>
+  <input type="number" placeholder="Timer" class="timer-input">
+  <div class="btn-flex">
+  <button class="start-btn">start</button>
+  <button class="pause-btn">pause</button>
+  <button class="reset-btn">reset</button>
+  </div>
+`
+body.appendChild(div)
+const btn = document.querySelector(".start-btn")
 
 btn.addEventListener("click", () => {
- setTimeout(() => {
+  setTimeout(() => {
   alert("yeyes")
- }, 3000)
+  }, 3000)
 })
-console.log(body)
+
