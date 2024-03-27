@@ -12,11 +12,11 @@ div.innerHTML = `
   </div>
 `
 body.appendChild(div)
-const btn = document.querySelector(".start-btn")
+const start = document.querySelector(".start-btn")
+const pause = document.querySelector(".pause-btn")
+const reset = document.querySelector(".reset-btn")
 
-btn.addEventListener("click", () => {
-  setTimeout(() => {
-  alert("yeyes")
-  }, 3000)
-})
+start.addEventListener("click", () => {})
+pause.addEventListener("click", () => {})
+reset.addEventListener("click", () => {})
 

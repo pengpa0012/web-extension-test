@@ -1,9 +1,3 @@
-.start-btn {
-  color: white;
-  background: rgb(25, 183, 251);
-  z-index: 1000000;
-}
-
 .ui {
   background: white;
   position: fixed;
@@ -14,4 +8,33 @@
   flex-direction: column;
   border-radius: 5px;
   gap: 10px;
+  z-index: 1000000;
+}
+
+.btn-flex {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.timer-display {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.timer-input {
+  background: transparent;
+  border: solid 1px black;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px;
+  color: black;
+}
+
+.btn-flex button{
+  color: black;
+  border: 5px;
+  cursor: pointer;
 }
