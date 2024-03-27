@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Timer",
+  "description": "Timer",
+  "version": "1",
+  "author": "Pengpa0012",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "time.png"
+  },
+  "icons": {
+    "16": "time.png",
+    "32": "time.png",
+    "48": "time.png",
+    "128": "time.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["script.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
