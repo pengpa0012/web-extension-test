@@ -6,7 +6,10 @@ let timer
 div.classList = "ui"
 div.innerHTML = `
   <p class="timer-display hidden">0</p>
-  <input type="time" placeholder="Timer" class="timer-input">
+  <div class="timer-input">
+    <input type="number" placeholder="Hour" class="hour-input">
+    <input type="number" placeholder="Minutes" class="minute-input">
+  </div>
   <div class="btn-flex">
   <button class="start-btn">start</button>
   <button class="reset-btn hidden">reset</button>
@@ -17,6 +20,8 @@ body.appendChild(div)
 const ui = document.querySelector(".ui")
 const closeBtn = document.querySelector(".close-btn")
 const timerDisplay = document.querySelector(".timer-display")
+const hourInput = document.querySelector(".hour-input")
+const minuteInput = document.querySelector(".minute-input")
 const timerInput = document.querySelector(".timer-input")
 const start = document.querySelector(".start-btn")
 const reset = document.querySelector(".reset-btn")
@@ -27,9 +32,19 @@ start.addEventListener("click", () => {
   reset.classList.remove("hidden")
   timerDisplay.classList.remove("hidden")
   timerInput.classList.add("hidden")
+  let totalTime = parseInt(hourInput.value * 60) + parseInt(minuteInput.value * 60)
   timer = setInterval(() => {
-    const date = new Date()
-    timerDisplay.textContent = `${((date.getHours() < 10 ? '0' : '') + date.getHours())}:${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}:${(date.getSeconds() < 10 ? '0' : '') + date.getSeconds()}`
+    const hours = Math.floor(totalTime / 60);
+    const minutes = totalTime % 60;
+
+    timerDisplay.innerHTML = hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
+
+    if (totalTime <= 0) {
+      clearInterval(timer);
+      timerDisplay.innerHTML = "Countdown Finished!";
+    } else {
+      totalTime--;
+    }
   }, 1000)
 })
 
@@ -42,9 +57,7 @@ reset.addEventListener("click", () => {
   clearInterval(timer)
 })
 
-
-// insert clock time
-// close input if already selected
-// hide start if running
-// hide reset if not running
+// change to hr and min
+// minus the time per tick
+// countdown
 

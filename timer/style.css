@@ -45,7 +45,8 @@
   margin: 10px 0;
 }
 
-.timer-input {
+.minute-input,
+.hour-input {
   background: transparent;
   border: solid 1px black;
   border-radius: 5px;
