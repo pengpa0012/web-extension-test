@@ -46,7 +46,7 @@
 }
 
 .minute-input,
-.hour-input {
+.second-input {
   background: transparent;
   border: solid 1px black;
   border-radius: 5px;
@@ -62,5 +62,27 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.overlay {
+  background: black;
+  position: fixed;
+  inset: 0;
+  z-index: 1000000000000000000;
+  display: grid;
+  place-items: center;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+}
+
+
+.close-overlay {
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: none;
 }
