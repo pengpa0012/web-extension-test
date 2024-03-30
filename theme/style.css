@@ -1,0 +1,33 @@
+.ui {
+  background: white;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  gap: 10px;
+  z-index: 1000000;
+  transform: translateX(-100%);
+  transition: 150ms ease-in;
+}
+
+.ui.active {
+  transform: translateX(0);
+}
+
+.ui .close-btn {
+  position: absolute;
+  top: 0;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  color: black;
+  display: grid;
+  font-weight: bold;
+  place-items: center;
+}
