@@ -11,6 +11,11 @@ div.innerHTML = `
 body.appendChild(div)
 const ui = document.querySelector(".ui")
 const toggleBtn = document.querySelector(".toggle-btn")
+const colorInput = document.querySelector(".color-input")
 
 
+
+colorInput.addEventListener("input", e => {
+  body.style.background = e.target.value
+})
 toggleBtn.addEventListener("click", () => ui.classList.toggle("active"))
