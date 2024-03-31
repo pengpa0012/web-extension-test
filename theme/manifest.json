@@ -6,18 +6,19 @@
   "author": "Pengpa0012",
   "action": {
     "default_popup": "index.html",
-    "default_icon": ""
+    "default_icon": "./theme.png"
   },
   "icons": {
-    "16": "",
-    "32": "",
-    "48": "",
-    "128": ""
+    "16": "./theme.png",
+    "32": "./theme.png",
+    "48": "./theme.png",
+    "128": "./theme.png"
   },
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["script.js"]
+      "js": ["script.js"],
+      "css": ["style.css"]
     }
   ]
 }
