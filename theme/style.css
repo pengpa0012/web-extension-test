@@ -13,6 +13,11 @@
   transition: 150ms ease-in;
 }
 
+h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
 .ui.active {
   transform: translateX(0);
 }
@@ -30,4 +35,16 @@
   display: grid;
   font-weight: bold;
   place-items: center;
+}
+
+.color-input,
+.img-input {
+  width: 100%;
+  background: transparent;
+  border: solid 1px black;
+  border-radius: 2px;
+}
+
+.colorpick-eyedropper-input-trigger {
+  display: none;
 }

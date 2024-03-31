@@ -3,7 +3,7 @@ const div = document.createElement("div")
 
 div.classList = "ui"
 div.innerHTML = `
-  <h1>Color Picker</h1>
+  <h2>Color Picker</h2>
   <input type="color" class="color-input"/>
   <input type="text" placeholder="Enter image URL" class="img-input"/>
   <button class="toggle-btn"></button>
