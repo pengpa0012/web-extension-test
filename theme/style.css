@@ -1,3 +1,7 @@
+body {
+  background-blend-mode: overlay;
+}
+
 .ui {
   background: white;
   position: fixed;
